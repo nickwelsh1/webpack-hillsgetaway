@@ -1,0 +1,244 @@
+@charset "utf-8";
+* {
+	/* First let's reset all padding and margins to give us an equal work area cross browser */
+	margin: 0px;
+	padding: 0px;
+}
+html {
+	/* Now reset the font size so we can use EM sizing cross browser */
+	font: 100% Arial, Helvetica, sans-serif;
+	overflow:  auto;
+}
+body {
+	margin: 0;
+	/* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center;
+	/* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+/*	color: #000;*/
+/*	background-color: #CCCCAA;*/
+	background-color: #EAEBEE;
+	background-repeat: repeat;
+	background-image: url(images/bg2.jpg);
+	/*font-size: 16px;*/
+		/*line-height: 1.2em;*//* bgcolor="#CCCC66" */
+}
+img {
+	border: hidden;
+	vertical-align: bottom;
+}
+.imgspace img {
+	margin: 0px 4px 10px 0px;
+}
+.imgspace a:hover, .imgspace a {
+	background-color:#FFF;
+	display:inline;
+	border: hidden;
+}
+a {
+	color: #3366CC;
+	text-decoration: none;
+}
+a:hover {
+/*	font-family: Arial, Helvetica, Trebuchet, Verdana, sans-serif;
+	font-style: normal;
+	line-height: normal;*/
+	/*display: inline;*/
+	height: 40px;
+	text-decoration: none;
+	color: #3399FF;
+	background-color: #FEDB6C;
+
+}
+a:active {
+	font-family: Arial, Helvetica, Trebuchet, Verdana, sans-serif;
+	color: #000000;
+	background-color: #FFFFFF;
+	white-space: normal;
+	text-decoration: none;
+}
+/*ajunk {
+	background-attachment: fixed;
+	background-image: url(images/flowersbg.gif);
+	background-position: left bottom;
+	font-style: normal;
+	font-variant: normal;
+	letter-spacing: 1em;
+	line-height: 11px;
+	word-spacing: 1em;
+	list-style-position: outside;
+	list-style-image: url(images/arrow_r.gif);
+}*/
+.subtitle {
+	font-weight: 900;
+	text-align: left;
+	text-decoration: none;
+}
+/*.orange-heading {
+	font-size: 12pt;
+	font-weight: bold;
+	color: #FF9900;
+	text-decoration: none;
+}*/
+#container {
+	clear:both;
+	margin-left:auto;
+	margin-right:auto;
+	border-color: #000;
+	border-width: 0px;
+	border-style: solid;
+	width:739px;
+	text-align: left;
+	line-height: 1.231em;
+	margin-top: 5px;
+	margin-bottom: 5px;/*	font-size: 0.813em;*/
+}
+.menu {
+	background-color:#F90;
+	height: 20px;
+/*	vertical-align: middle;*/
+	font-weight: 900;
+	text-align: left;
+	text-decoration: none;
+	padding: 6px 20px;
+	/* [disabled]display: block; */
+}
+td {
+	vertical-align:top;
+}
+.tables1{
+	width:739px;
+	border-collapse:collapse;
+	border-width: 0px;
+	border-color: #FFF;
+	background-color:#FFF;
+}
+.mainleft {
+	vertical-align: bottom;
+}
+.mainmid {
+	padding: 0px 5px 0px 0px;
+	margin: 0px 0px;
+}
+.mainright {
+	width: 200px;
+	padding: 0px 12px 0px 10px;
+	margin: 0px 0px;
+}
+.tables2 {
+	width:100%;
+	border-collapse: collapse;
+	/*	border: #999, solid;*/
+	border-width: 0px;
+	/*	border-style: solid;
+	border-color: #999;*/
+	background-color:#FFF;
+	font-size:13px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 1.5em;
+	/*vertical-align: top;   NO EFFECT*/
+	/*padding: 4px 0px 4px 0px;  NO EFFECT*/
+}
+.tables2 h3 {
+	color: #FF9900;
+	font-weight:bold;
+	font-size: 100%;
+}
+.tables2 tr, .tables2 td {
+	background-color:#FFFDD7;
+	border-collapse: collapse;
+	border-width: 0px 0px 2px 0px;
+	vertical-align: top;
+	border-style: solid;
+	border-color:#FFF;
+	padding: 4px 2px 4px 10px;
+	margin: 0px;
+	text-align:left;
+	text-decoration:none;
+	font-size: 100%;
+	}
+/*.odd {
+	background-color:#FFFDD7;
+	border-collapse: collapse;
+	border-width: 0px 0px 2px 0px;
+	vertical-align: top;
+		border-style: solid;
+		border-color:#FFF;
+	padding: 0px 2px 0px 10px;
+	margin: 0px;
+	text-align:left;
+	text-decoration:none;
+	}*/
+	
+.tables2 th {
+	background-color:#FFECDD;
+	border-collapse: collapse;
+	border-width: 0px 0px 2px 0px;
+	vertical-align: top;
+		border-style: solid;
+		border-color:#FFF;
+	padding: 4px 2px 4px 10px;
+	margin: 0px;
+	text-align:left;
+	font-weight: normal;
+	}
+
+/*  Clears Table Borders   */	
+/*	table   
+{
+border-collapse:collapse;
+}
+table, td, th
+{
+border:1px solid black;
+}*/
+
+p {
+    /*display: inline;*/
+	font-size: 0.813em;
+	padding: 0px 0px 6px 0px;
+}  /*also Applied in #container*/
+.bld {
+	font-weight:bold;
+}
+h1 {
+}
+h2 {
+	color: #FF9900;
+	font-weight:bold;
+	font-size:0.813em;
+	padding: 15px 0px;
+	/* [disabled]display: block; */
+}
+h3 {
+	color: #FF9900;
+	font-weight:bold;
+	font-size:0.813em;
+	/*	padding: 15px 0px;*/
+	/*	background-color:#000;*/
+}
+.small {
+	font-size: 62.5%;
+	text-decoration: none;
+	text-align:center;
+}
+
+/*.shadow1 {
+        margin: 10px;
+        background-color: rgb(68,68,68);*/ /* Needed for IEs */
+
+/*        -moz-box-shadow: 5px 5px 5px rgba(68,68,68,0.2);
+        -webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.2);
+        box-shadow: 5px 5px 5px rgba(68,68,68,0.2);
+
+        filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+        zoom: 1;
+		
+		width: 739px;
+}*/
+.shadow1 .content {
+        /*position: relative;*/ /* This protects the inner element from being blurred */
+        /*padding: 0px;
+        background-color: #DDD;*/
+}

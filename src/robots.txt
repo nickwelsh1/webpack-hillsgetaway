@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /cpmove.psql.1227106379/
+Disallow: /etc/
+Disallow: /mail/
+Disallow: /tmp/
+Disallow: demo.html
