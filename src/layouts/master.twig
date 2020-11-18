@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Adelaide Hills Getaway website</title>
+
+    <!-- Open Graph metadata -->
+
+    <meta property="og:title" content="Adealide Hills Getaway Accommodation">
+    <meta property="og:description" content="Adelaide Hills Getaway Accommodation overnight & holiday accommodation macclesfield village self-contained, studio, two, four, five bedroom units & function facilities on Venables Street, Macclesfield near Echunga, Mt. Barker, Meadows, Prospect Hill, Paris Creek, Strathalbyn. overnight weekly stay lodge bed & breakfast">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hillsgetaway.com.au">
+    <meta property="og:image" content="https://hillsgetaway.com.au/images/maccy_web_top2.png">
+
+    <!-- End Open Graph metadata -->
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <!-- Prefetch -->
+
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+    <!-- End prefetch -->
+
+    <link href="favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link href="favicon.ico" type="image/x-icon" rel="icon">
+
+    <!-- Stylesheets -->
+        {# <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="main-style.css"> #}
+        <!-- <link rel="stylesheet" href="sitestyle.css"> -->
+    <!-- End stylesheets -->
+
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+{% include "header.twig" %}
+
+
+<!--
+<div class="site-hero">
+
+    <div class="site-content__parallax">
+        <div class="parallax__group   slide-one">
+            <div class="slide-one__near">
+                near
+            </div>
+            <div class="slide-one__base">
+                base
+            </div>
+        </div>
+    </div>
+
+</div> -->
+
+
+<div class="site-content">
+    {% block content %}
+    {% endblock %}
+</div><!-- End .site-content -->
+
+
+
+{% include "footer.twig" %}
+
+
+</body>
+</html>

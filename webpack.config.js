@@ -3,6 +3,12 @@
   const { CleanWebpackPlugin } = require('clean-webpack-plugin');
   const MiniCssExtractPlugin = require('mini-css-extract-plugin');
   const WorkboxPlugin = require('workbox-webpack-plugin');
+  const imgPath = './images/';
+  const imageminGifsicle = require("imagemin-gifsicle");
+  const imageminPngquant = require("imagemin-pngquant");
+  const imageminSvgo = require("imagemin-svgo");
+  const imageminMozjpeg = require('imagemin-mozjpeg');
+  const CopyPlugin = require('copy-webpack-plugin');
 
   module.exports = {
     mode: 'development',
@@ -12,7 +18,9 @@
     },
     devtool: 'inline-source-map',
     devServer: {
-      contentBase: './dist'
+      contentBase: './dist',
+      compress: true,
+      port: 9000
     },
     output: {
       filename: '[name].bundle.js',
@@ -40,9 +48,10 @@
           use: [
             // Creates `style` nodes from JS strings
             // fallback to style-loader in development
-            process.env.NODE_ENV !== 'development' // 'production'
-            ? 'style-loader'
-            : MiniCssExtractPlugin.loader,
+            // process.env.NODE_ENV !== 'production' // 'production' 'development'
+            // ? 'style-loader' : MiniCssExtractPlugin.loader,
+            // "style-loader",
+            MiniCssExtractPlugin.loader,
             {
               loader: 'css-loader',
               options: {
@@ -52,20 +61,23 @@
             {
               loader: 'sass-loader',
               options: {
-                sourceMap: true,
+                // sourceMap: true,
+                // Prefer `dart-sass`
+                implementation: require('sass'),
               }
             }
           ]
         },
         {
-          test: /\.css$/,
+          test: /\.css$/i,
           use: [
-            'style-loader',
+            // 'style-loader',
+            MiniCssExtractPlugin.loader,
             'css-loader'
           ]
         },
         {
-          test: /\.(png|svg|jpg|gif)$/,
+          test: /\.(png|svg|jpg|jpeg|gif)$/,
           use: [
             'file-loader'
           ]
@@ -73,7 +85,36 @@
         {
           test: /\.(woff|woff2|eot|ttf|otf)$/,
           use: [
-            'file-loader'
+            {
+              loader: 'file-loader?name=images/[name].[ext]',
+              options: {
+                publicPath: imgPath
+              }
+            },
+            {
+              loader: 'img-loader',
+              options: {
+                  plugins: [
+                      imageminGifsicle({
+                          interlaced: false
+                      }),
+                      imageminMozjpeg({
+                          progressive: true,
+                          arithmetic: false
+                      }),
+                      imageminPngquant({
+                          floyd: 0.5,
+                          speed: 2
+                      }),
+                      imageminSvgo({
+                          plugins: [
+                              { removeTitle: true },
+                              { convertPathData: false }
+                          ]
+                      })
+                  ]
+              }
+            }
           ]
         }
       ]
@@ -81,8 +122,8 @@
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        template: './src/index.twig', // .twig
-        name: './dist/index.html',
+        template: path.resolve(__dirname, 'src', 'index.twig'), // .twig './src/index.twig', resolve(__dirname, 'src/public', 'index.html'),
+        filename: './index.html',
         inject: true,
         minify: {
           removeComments: true,
@@ -100,6 +141,11 @@
         // and not allow any straggling "old" SWs to hang around
         clientsClaim: true,
         skipWaiting: true
-      })
+      }),
+      new CopyPlugin({
+        patterns: [
+          { from: 'src/images', to: 'images' },
+        ],
+      }),
     ]
   };

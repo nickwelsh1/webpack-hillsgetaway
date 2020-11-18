@@ -1,0 +1,267 @@
+body {
+    overflow-y: auto;
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4em;
+
+    transform: translateZ(0px); /* Fix paint issues in Edge && Safari H/W acceleration */
+
+    color: #444;
+
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: .5em;
+}
+p {
+    margin-top: .2em;
+}
+.small {
+    padding: 0 20px;
+
+    font-size: 12px;
+}
+h1 {
+    font-family: "Lora", serif;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 1.10909;
+}
+h2 {
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 1.22667;
+}
+h3 {
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 1.36364;
+
+    color: #bf9882;
+}
+h4 {
+    font-size: 18px;
+    font-weight: 100;
+}
+a {
+    text-decoration: none;
+
+    color: #ef7633;
+}
+a:hover {
+    color: #6D9F40;
+    // color: #ef0033;
+}
+table,
+thead,
+tfoot,
+tbody,
+tr,
+td {
+    border: 0;
+}
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0 20px;
+
+    border-bottom: 1px solid #aaa;
+}
+
+
+
+.site-header__title-first h1,
+.site-header__title-second h1 {
+    /* margin-right: auto;
+    margin-left: auto; */
+    text-align: center;
+}
+
+.site-header__item--logo {
+    display: block;
+    width: 188px;     /* 96 */
+    margin-right: auto;
+    margin-left: auto;
+}
+// .site-header__item--logo img {
+//     display: block;
+//     margin-right: auto;
+//     margin-left: auto;
+// }
+.site-navigation__list {
+    padding: 0;
+
+    text-align: center;
+}
+.site-navigation__item {
+    display: inline;
+    margin: 0;
+
+    list-style: none;
+}
+/*a*/.site-navigation__link {
+
+    display: inline-block;
+    padding: 10px 20px 4px;
+
+    // transition: background-color .5s, color 1.9s;
+
+    outline: 0;
+    background-color: #fff;
+}
+/*a*/
+.site-navigation__link:hover,
+.site-navigation__link:focus {
+    // transition: background-color .5s, color 1.9s;
+
+    color: #6D9F40;
+    // color: #efefef;
+    // background-color: #444;
+}
+.site-navigation__link span {
+    position: relative;
+
+    display: block;
+    padding: 0 0 5px;
+}
+
+
+.site-content,
+.footer-content,
+.copyright {
+    margin-right: auto;
+    margin-left: auto;
+}
+.site-header__container,
+.site-content__main,
+.site-content__aside {
+    padding: 20px;
+}
+.banner-image {
+    width: 100%;
+}
+a:hover .book-image {
+    opacity: .6;
+}
+.site-footer {
+    clear: both;
+
+    .copyright {
+        clear: both;
+        text-align: center;
+    }
+}
+.site-footer__container {
+
+}
+.site-footer__main--image img {
+    width: 100%;
+}
+
+
+.site-content__parallax {
+    position: absolute;
+
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    -webkit-perspective: 300px;
+            perspective: 300px;
+    scroll-behavior: smooth;
+}
+
+.page {
+    position: relative;
+    top: 60%;
+
+    padding: 20px 20%;
+
+    background-color: white;
+}
+
+.slide__one {
+    z-index: 3;
+}
+.parallax__group {
+    position: relative;
+
+    height: 500px;
+    height: 100vh;
+
+    -webkit-transition: -webkit-transform .5s;
+            transition:         transform .5s;
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.slide-one__base {
+    z-index: 4;
+
+    display: block;
+    height: 100px;
+    padding: 50vh 0;
+}
+
+.slide-one__near {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+
+    -webkit-transform: translateZ(-300px) scale(2);
+            transform: translateZ(-300px) scale(2);
+    transform-origin: 50% 50%;
+
+    background: url("../images/gallery/DSCF2973.jpg") no-repeat 50% 50%;
+    background-color: orange;
+    /* background-size: 100% 100%; */
+}
+
+
+
+@media (min-width: 640px) {
+    .site-content__main,
+    .site-content__aside {
+        padding: 20px;
+    }
+}
+@media (min-width: 1000px) {
+    .site-content,
+    .footer-content,
+    .copyright {
+        width: 980px;
+    }
+    .site-content__main,
+    .site-footer__main {
+        // display: inline-block;
+        float: left;
+        width: calc( 100% - 380px);
+        padding: 20px 20px;
+    }
+    .site-content__aside,
+    .site-footer__aside {
+        display: inline-block;
+        // float: left;
+        width: 300px;
+        padding: 20px 20px;
+    }
+}
