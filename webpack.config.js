@@ -130,6 +130,15 @@
           collapseWhitespace: false
         }
       }),
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, 'src', 'photos.twig'), // .twig './src/photos.twig', resolve(__dirname, 'src/public', 'photos.html'),
+        filename: './photos.html',
+        inject: true,
+        minify: {
+          removeComments: true,
+          collapseWhitespace: false
+        }
+      }),
       new MiniCssExtractPlugin({
         // Options similar to the same options in webpackOptions.output
         // both options are optional

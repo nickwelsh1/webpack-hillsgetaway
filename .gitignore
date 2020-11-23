@@ -23,3 +23,5 @@ jspm_packages/
 
 # build output
 dist/
+
+DESIGNS/

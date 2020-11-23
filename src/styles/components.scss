@@ -1,4 +1,5 @@
 body {
+    margin: 0;
     overflow-y: auto;
 
     font-family: "Open Sans", sans-serif;
@@ -87,16 +88,41 @@ td {
 
 .site-header__title-first h1,
 .site-header__title-second h1 {
-    /* margin-right: auto;
-    margin-left: auto; */
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
+}
+
+svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 564px;
 }
 
 .site-header__item--logo {
     display: block;
-    width: 188px;     /* 96 */
+    // width: 250px;     /* 96 */
+    width: 88vw;
+    max-width: 350px;
     margin-right: auto;
     margin-left: auto;
+
+    .image {
+        // width: 88vw;
+    }
+}
+
+// .floorplan {
+//     max-width: 350px;
+// }
+figure {
+    max-width: 350px;
+    img {
+        width: 100%;
+    }
+}
+figcaption {
+    text-align: center;
 }
 // .site-header__item--logo img {
 //     display: block;
@@ -147,7 +173,6 @@ td {
     margin-right: auto;
     margin-left: auto;
 }
-.site-header__container,
 .site-content__main,
 .site-content__aside {
     padding: 20px;
@@ -171,6 +196,10 @@ a:hover .book-image {
 }
 .site-footer__main--image img {
     width: 100%;
+}
+
+.site-footer__aside {
+    padding: 20px 20px;
 }
 
 
@@ -263,6 +292,6 @@ a:hover .book-image {
         display: inline-block;
         // float: left;
         width: 300px;
-        padding: 20px 20px;
+        padding: 20px 10px;
     }
 }
