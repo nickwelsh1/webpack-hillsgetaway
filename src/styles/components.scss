@@ -121,6 +121,53 @@ svg {
 //     max-width: 350px;
 // }
 
+ul.notes {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-top: 26px;
+    margin-bottom: 30px;
+    li {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        &.stared {
+            margin-top: 20px;
+        }
+    }
+}
+
+blockquote {
+}
+
+.quote__text {
+    display: inline;
+    margin: 0;
+    &:before,
+    &:after {
+        color: #bbb;
+        line-height: 1em;
+        font-weight: 700;
+        font-family: 'Trebuchet MS', serif;
+    }
+    &:before {
+        content: '\201C';
+    }
+    &:after {
+        content: '\201D';
+    }
+}
+
+.quote__person {
+    display: inline-block;
+    color: #bbb;
+    font-size: 0.8em;
+    line-height: 1em;
+    font-weight: 100;
+    font-style: italic;
+    &:before {
+        content: ' - ';
+    }
+}
+
 figure {
     max-width: 250px;
     img {
@@ -226,6 +273,29 @@ a:hover .book-image {
     background-color: white;
 }
 
+.pair {
+    display: flex;
+    figure {
+        flex-grow: 1;
+    }
+}
+
+.price-card {
+    flex-grow: 1;
+}
+
+.price-card__title {
+
+}
+
+.price-card__price-one {
+
+}
+
+.price-card__price-one--label {
+
+}
+
 .slide__one {
     z-index: 3;
 }
@@ -268,12 +338,12 @@ a:hover .book-image {
 }
 
 
-@media (min-width: 640px) {
-    .site-content__main,
-    .site-content__aside {
-        padding: 20px;
-    }
-}
+// @media (min-width: 640px) {
+//     .site-content__main,
+//     .site-content__aside {
+//         padding: 20px;
+//     }
+// }
 
 @media (min-width: 1000px) {
     .site-content,
