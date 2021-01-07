@@ -1,5 +1,11 @@
 {% extends "layouts/master.twig" %}
 
+{% block head %}
+    <title>Adelaide Hills Getaway Accommodation in the hills</title>
+    <meta name="Description" content="Adelaide Hills Getaway Accommodation offers a range of options for one or two persons through to large groups of twenty plus. Accommodation and facilities for functions. Located in the stunning Adelaide hills, close to Adelaide and only minutes to Hahndorf, Mount Barker, Strathalbyn and McLaren Vale.">
+    <meta name="keywords" content="Adelaide Hills Getaway Accommodation in the hills">
+{% endblock %}
+
 {% block content %}
         <section class="site-content__inner">
 
@@ -8,7 +14,7 @@
                 <p>Get-togethers with family & friends in Gum Tree Lodge to celebrate that special event. STAY LONGER AND SAVE SPECIALS. Can sleep up to 11 in five bedrooms (queen and single beds), function/dining area, kitchen, cooking facilities, private courtyard, air con, offstreet parking. The whole complex is available for exclusive use.</p>
 
                 <figure>
-                    <img src="images/gallery/correa.jpg" alt="photo of Correa unit">
+                    <img src="images/gallery/correa.jpg" alt="photo of Correa unit bedroom">
                 </figure>
                 <h2>Tariffs</h2>
                 <p>(Rates are per night, Linen and GST is included. 3 Night minimum Easter and Christmas, 2 nights SA long weekends)</p>
@@ -25,6 +31,19 @@
                                 <span class="price-card__price-six">$600</span>
                             </p> #}
                             <table class="price-table1">
+                                <script type='application/ld+json'>
+                                {
+                                    "@context": "http://schema.org/",
+                                    "@type": ["HotelRoom","Product"],
+                                    "name": "correa for 2 persons",
+                                    "offers": {
+                                        "@type": "Offer",
+                                        "url": "http://hillsgetaway.com.au/",
+                                        "priceCurrency": "AUD",
+                                        "price": "120.00"
+                                    }
+                                }
+                                </script>
                                 <tbody>
                                     <tr>
                                         <td>
@@ -39,8 +58,8 @@
                             </table>
                         </div>
                         <figure class="floorplan">
-                            <img src="images/correa.svg" alt="Correa (2 bedrooms)">
-                            <figcaption>Correa (2 bdrm) *</figcaption>
+                            <img src="images/correa.svg" alt="Correa (2 bedrooms) floorplan">
+                            <figcaption>Correa (2 bdrm)*</figcaption>
                         </figure>
                     </div>
 
@@ -61,8 +80,8 @@
                             </table>
                         </div>
                         <figure class="floorplan">
-                            <img src="images/banksia.svg" alt="Banksia (2 bedrooms)">
-                            <figcaption>Banksia (2 bdrm) *</figcaption>
+                            <img src="images/banksia.svg" alt="Banksia (2 bedrooms) floorplan">
+                            <figcaption>Banksia (2 bdrm)*</figcaption>
                         </figure>
                     </div>
 
@@ -83,44 +102,12 @@
                             </table>
                         </div>
                         <figure class="floorplan">
-                            <img src="images/accacia.svg" alt="Accacia (2 bedrooms)">
-                            <figcaption>Accacia (2 bdrm) *</figcaption>
+                            <img src="images/accacia.svg" alt="Accacia (2 bedrooms) floorplan">
+                            <figcaption>Accacia (2 bdrm)*</figcaption>
                         </figure>
                     </div>
 
 
-                    {# <table class="price-table1">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <h3>Correa (2 person)</h3> $120 **
-                                </td>
-                                <td>
-                                    <h3>6 nights</h3>
-                                    $600
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <h3>Banksia (4 person) </h3> $150
-                                </td>
-                                <td>
-                                <h3>6 nights</h3>
-                                    $600
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h3>Acacia (4 person) </h3> $150
-                                </td>
-                                <td>
-                                <h3>6 nights</h3>
-                                    $600
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table> #}
 
 
 
@@ -188,7 +175,7 @@
             <aside class="site-content__aside">
                 <h2>Local Attractions</h2>
                 <p>
-                    <a href="http://www.battunga.org.au" target="_blank">www.battunga.org.au</a>
+                    <a href="http://www.battunga.org.au" target="_blank" rel="noopener">www.battunga.org.au</a>
                 </p>
                 <p>Close to wineries, friendly heritage pubs, scenic drives, walks, rides &amp; cycles, arts &amp; antiques, markets, Crystal Lake sculpture and ceramics park. Prospect Hill Dairy &amp; Pioneer Museum, Kuitpo Forest, Onkaparinga Gorge, wildflowers, kookaburras &amp; kangaroos, Jupiter Creek &amp; Chapel Hill historic goldfields, Battunga-Country villages, wedding venues and the sounds and sights of a calendar of Special Events.
                 </p>

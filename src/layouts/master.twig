@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Adelaide Hills Getaway website</title>
+
+    {% block head %}
+        <title>Adelaide Hills Getaway website</title>
+        <meta name="Description" content="">
+    {% endblock %}
 
     <!-- Open Graph metadata -->
 
@@ -12,7 +16,13 @@
     <meta property="og:description" content="Adelaide Hills Getaway Accommodation overnight & holiday accommodation macclesfield village self-contained, studio, two, four, five bedroom units & function facilities on Venables Street, Macclesfield near Echunga, Mt. Barker, Meadows, Prospect Hill, Paris Creek, Strathalbyn. overnight weekly stay lodge bed & breakfast">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.hillsgetaway.com.au">
-    <meta property="og:image" content="https://hillsgetaway.com.au/images/maccy_web_top2.png">
+    <meta property="og:image" content="https://hillsgetaway.com.au/images/gallery/DSCF4437.jpg">
+    <meta property="og:site_name" content="Adealide Hills Getaway Accommodation" />
+    <meta property="og:image:alt" content="Adealide Hills Getaway Accommodation exterior" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Adelaide Hills Getaway Accommodation overnight & holiday accommodation macclesfield village self-contained, studio, two, four, five bedroom units & function facilities on Venables Street, Macclesfield near Echunga, Mt. Barker, Meadows, Prospect Hill, Paris Creek, Strathalbyn. overnight weekly stay lodge bed & breakfast." />
+    <meta name="twitter:title" content="Adealide Hills Getaway Accommodation in the hills" />
+    <meta name="twitter:image" content="https://hillsgetaway.com.au/images/gallery/DSCF4437.jpg">
 
     <!-- End Open Graph metadata -->
 
@@ -24,6 +34,7 @@
 
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="manifest" href="/manifest.json">
 
 
     <!-- End prefetch -->
@@ -38,6 +49,50 @@
     <!-- End stylesheets -->
 
     <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans" rel="stylesheet">
+
+    <!-- schema microdata -->
+    <script type='application/ld+json'>
+    {
+        "@context": "http:\/\/schema.org",
+        "@type": "WebSite",
+        "@id": "#website",
+        "url": "http:\/\/www.hillsgetaway.com.au\/",
+        "name": "Adelaide Hills Getaway Accommodation"
+    }
+    </script>
+    <!-- end schema microdata -->
+
+    <script type='application/ld+json'>
+    {
+        "@context": "http://www.schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Adelaide Hills Getaway Accommodation",
+        "url": "http://hillsgetaway.com.au/",
+        "logo": "/images/ahg-logo7b.svg",
+        "image": "http://hillsgetaway.com.au/images/gallery/DSCF4437.jpg",
+        "description": "Adelaide Hills Getaway Accommodation offers a range of options for one or two persons through to large groups of twenty plus. Accommodation and facilities for functions. Located in the stunning Adelaide hills, close to Adelaide and only minutes to Hahndorf, Mount Barker, Strathalbyn and McLaren Vale.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "23-25 Venables Street",
+            "addressLocality": "Macclesfield",
+            "addressRegion": "South Australia",
+            "postalCode": "5153",
+            "addressCountry": "Australia"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-35.0351986",
+            "longitude": "138.5982568"
+        },
+        "openingHours": "Mo, Tu, We, Th, Fr, Sa, Su -",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+(61 8) 8388 9295",
+            "contactType": "general"
+        },
+        "priceRange": "$"
+    }
+    </script>
 
 </head>
 
