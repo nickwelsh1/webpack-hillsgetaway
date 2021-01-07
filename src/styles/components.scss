@@ -67,8 +67,8 @@ h4 {
 
 a {
     text-decoration: none;
-
-    color: #ef7633;
+    color: #426222;
+    // color: #ef7633; not accessible
 }
 
 a:hover {
@@ -177,6 +177,7 @@ figure {
 
 figcaption {
     text-align: center;
+    font-size: smaller;
 }
 
 .site-navigation__list {
