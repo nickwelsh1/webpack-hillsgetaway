@@ -1,0 +1,26 @@
+{
+  "short_name": "Hills Getaway Accom",
+  "name": "Adelaide Hills Getaway Accommodation",
+  "description": "Adelaide Hills Getaway Accommodation",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f39200",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Photos of Adelaide Hills Getaway Accommodation and surrounds",
+      "short_name": "Photos",
+      "description": "Photos of Adelaide Hills Getaway Accommodation and surrounding region",
+      "url": "/photos.html",
+      "icons": [{ "src": "/images/gallery/sml_DSCF4437.jpg", "sizes": "192x192" }]
+    }
+  ]
+}

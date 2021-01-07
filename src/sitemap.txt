@@ -1,5 +1,4 @@
-http://hillsgetaway.com.au/index.htm
-http://www.hillsgetaway.com.au/index.htm
-http://hillsgetaway.com.au/gallery.htm
-http://www.hillsgetaway.com.au/gallery.htm
-http://www.au.v3travel.com/vcubed/page/mywebsite/adelaide_hills_getaway.home
+http://hillsgetaway.com.au/index.html
+http://www.hillsgetaway.com.au/index.html
+http://hillsgetaway.com.au/photos.html
+http://www.hillsgetaway.com.au/photos.html
