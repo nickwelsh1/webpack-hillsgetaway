@@ -44,5 +44,8 @@
   "dependencies": {
     "imagemin": "^7.0.1",
     "normalize-scss": "^7.0.1"
+  },
+  "volta": {
+    "node": "12.19.0"
   }
 }
