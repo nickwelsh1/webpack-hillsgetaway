@@ -193,6 +193,14 @@ figure {
         object-fit: cover;
     }
 }
+.floorplan.wide {
+    img {
+        height: 32vw;
+        @media (min-width: 983px) {
+            height: 340px;
+        }
+    }
+}
 
 figcaption {
     text-align: center;

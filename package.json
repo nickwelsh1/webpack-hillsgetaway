@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open",
+    "build": "webpack --mode production",
     "watch": "webpack --watch --mode development && webpack-dev-server --inline --hot ",
     "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "start": "webpack-dev-server --open",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "oldstart": "http-server dist"
   },
   "keywords": [],
@@ -42,8 +42,7 @@
     "workbox-webpack-plugin": "^4.3.1"
   },
   "dependencies": {
-    "imagemin": "^7.0.1",
-    "normalize-scss": "^7.0.1"
+    "imagemin": "^7.0.1"
   },
   "volta": {
     "node": "12.19.0"

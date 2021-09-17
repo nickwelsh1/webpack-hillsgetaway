@@ -1,14 +1,13 @@
-# webpack-hillsgetaway
+#webpack-hillsgetaway
 
 Using Webpack so use
-`npm run start`
-`npm run dev`
-`npm run watch`
-`npm run build`
+`npm run start` // dev build, server and watch changes
+`npm run dev`  // dev build, no server or watch ?
+`npm run watch`  // watch, but no server ?
+`npm run build`  // build for production
 
 
 # TODO:
-basic beds & room map for each unit. placed on home page
 microdata properties/json-ld schema for more pricing?
 Improve table/(cards?) typography
 <!-- Map route via hahndorf OR via Stirling - can't do if coming from Strath or Melbourne -->
@@ -19,3 +18,20 @@ images are probably not being minified?
 normalize-scss is not actually being used. -uninstall
 <!-- upload / go live. -->
 <!-- commit to a repository -->
+
+
+Content compression is now enabled for the following MIME types: “
+    text/html
+    text/plain
+    text/xml
+    text/css
+    text/javascript
+    image/svg+xml
+    application/javascript
+    application/x-javascript
+    application/json
+    application/xhtml+xml
+    application/graphql
+    application/ld+json
+    application/feed+json
+”.
